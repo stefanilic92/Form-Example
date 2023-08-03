@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Stefan Ilic">
+        <meta name="description" content="html form elements">
+        <meta name="keywords" content="html, css, input, data, multiple choice, password">
+
+        <!--CSS START-->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="container">
+            
+            <h2>Form Example</h2>
+
+            <form class="styling-form" method="POST" action="" style="background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(css/assets/form.jpg)">
+
+
+
+                <!-- 
+                Text based inputs
+                -->
+
+                <fieldset>
+                    <legend>Text based elements</legend>
+                    <div class="d-flex justify-between wrap">
+                    <!--Name start-->
+                    <div class="two-column form-group">
+                        <label for="name">Name</label><br>
+                        <input class="form-element" id="name" type="text" name="name" value="" placeholder="Marc" required="" >
+                    </div><!--Name end-->
+                    <!--Pass start-->
+                    <div class="two-column form-group">
+                        <label for="password">Password</label><br>
+                        <input class="form-element" id="password" type="password" name="password" value="" required="">
+                    </div><!--Pass end-->
+
+                    <!--Email start-->
+                    <div class="two-column form-group">
+                        <label for="email">Email</label><br>
+                        <input class="form-element" id="email" type="email" name="email" value="" required="" placeholder="example@mail.com">
+                    </div><!--Email start-->
+
+                    <!--Phone start-->
+                    <div class="two-column form-group">
+                        <label>Phone</label><br>
+                        <input class="form-element" type="tel" name="phone" value="" placeholder="+381 11 123 456"><br>
+                    </div><!--Phone end-->
+
+                    <!--Message start-->
+                    <div class="one-column form-group">
+                        <label for="message">Message</label><br>
+                        <textarea class="form-element" id="message" name="message" placeholder="Messsage" autofocus="" rows="7" cols="50"></textarea><br>
+                    </div><!--Message start-->
+                    </div>
+                </fieldset>
+
+
+                <!--
+                Multiple Choice
+                -->
+
+                <fieldset>
+                    <legend>Multiple choice</legend>
+
+                    <div class="form-group">
+                        <h5>Plese select Frontend development programming languages</h5>
+                        <label class="d-block">
+                            <input type="checkbox" name="frontend_areas[]" value="html">
+                            <span class="fake-checkbox"></span>
+                            HTML
+                            
+                        </label>
+
+                        <label class="d-block">
+                            <input type="checkbox" name="frontend_areas[]" value="css">
+                            <span class="fake-checkbox"></span>
+                            CSS
+                        </label>
+
+                        <label class="d-block">
+                            <input type="checkbox" name="frontend_areas[]" value="object_c"> 
+                            <span class="fake-checkbox"></span>
+                            Object C
+                        </label>
+
+                        <label class="d-block">
+                            <input type="checkbox" name="frontend_areas[]" value="sass">
+                            <span class="fake-checkbox"></span>
+                            Sass
+                        </label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <h5>Which one you are learning now?</h5>
+                        <label class="d-block">
+                            <input type="radio" name="current_area" value="html">
+                            <span class="fake-radio"></span>
+                            HTML
+                        </label>
+                        <label class="d-block">
+                            <input type="radio" name="current_area" value="css">
+                            <span class="fake-radio"></span>
+                            CSS
+                        </label>
+                        <label class="d-block">
+                            <input type="radio" name="current_area" value="sass">
+                            <span class="fake-radio"></span>
+                            Sass
+                        </label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="country">
+                            Country
+                        </label>
+
+                        <select class="form-element d-block"  name="country" id="country">
+                            <option value="">----</option>
+                            <optgroup label="Europe">
+                                <option value="serbia">Serbia</option>
+                                <option value="italy">Italy</option>
+                                <option value="Spain">Spain</option>
+                            </optgroup>
+                            <optgroup label="Asia">
+                                <option value="china">China</option>
+                                <option value="japan">Japan</option>
+                                <option value="uae">UAE</option>
+                            </optgroup>
+                        </select>
+                    </div>                                      
+                    <div class="form-group">
+                        <button class="submit" name="send" type="submit" value="yes">SEND</button>
+                        <button class="reset" name="reset" type="reset" value="yes">RESET</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+
+
+        </div>
+    </body>
+</html>
